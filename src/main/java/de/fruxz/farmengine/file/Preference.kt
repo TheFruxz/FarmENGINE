@@ -23,7 +23,7 @@ class Preference<T>(val file: FileManager, val path: String, val default: T?) {
                     } catch (e: ClassCastException) {
                         if (default != null)
                             content = default
-                        
+
                         default
                     })
 
