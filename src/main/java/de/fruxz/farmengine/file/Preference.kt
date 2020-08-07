@@ -21,12 +21,16 @@ class Preference<T>(val file: FileManager, val path: String, val default: T?) {
                         file.loader.get(path) as T?
 
                     } catch (e: ClassCastException) {
-                        content = default
+                        if (default != null)
+                            content = default
+                        
                         default
                     })
 
                 } else {
-                    content = default
+                    if (default != null)
+                        content = default
+
                     return default
                 }
 
