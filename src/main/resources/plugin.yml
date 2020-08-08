@@ -1,7 +1,10 @@
 name: FarmENGINE
 version: @version@
 main: de.fruxz.farmengine.Main
-api-version: 1.15
 authors: [Fruxz]
 description: FarmENGINE - The plugin to create an farmworld
 website: https://github.com/TheFruxz
+commands:
+  farmworld:
+    description: teleports you to the farmworld
+    usage: /<command>
