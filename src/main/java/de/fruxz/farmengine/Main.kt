@@ -1,5 +1,6 @@
 package de.fruxz.farmengine
 
+import de.fruxz.farmengine.commands.FarmWorldCommand
 import org.bukkit.Bukkit
 import org.bukkit.World
 import org.bukkit.WorldCreator
@@ -20,6 +21,8 @@ class Main : JavaPlugin() {
 
     override fun onEnable() {
         val farmworldName = "FarmENGINE"
+
+        getCommand("farmworld")!!.setExecutor(FarmWorldCommand())
 
         if (Bukkit.getWorld(farmworldName) != null) {
 
