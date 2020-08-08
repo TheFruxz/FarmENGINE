@@ -24,7 +24,7 @@ class Main : JavaPlugin() {
 
         getCommand("farmworld")!!.setExecutor(FarmWorldCommand())
 
-        if (Bukkit.getWorld(farmworldName) != null) {
+        if (Bukkit.getWorld(farmworldName) == null) {
 
             val creator = WorldCreator(farmworldName)
 
